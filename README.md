@@ -24,12 +24,12 @@ chrome_options.add_argument('--disable-dev-shm-usage')
 该模块用来对文章索引和基本信息（不包括文章内容）的csv文件进行整合，并找出没有更新到数据库的文章，便于pageop_mongo_sogou.py模块进行数据库的更新，整合后的索引csv文件pages.csv还可以给selenium_sogou.py模块优化速度和请求量，对已经爬取过的文章跳过打开文章详情页的过程，防止被反爬。
 3. pageop_mongo_sogou.py  
 该模块利用merge_csv_sogou.py模块整合的索引csv文件db_pages.csv对保存为html文件的文章读取并和基本信息写入mongodb数据库。
-### 文件夹
+### 工程文件夹（我比较懒，所以要你们自己创建文件夹23333）
 1. pageCsv  
 保存了每次爬取文章的索引和基本信息（不包括文章内容）csv文件，主要有三种形式：  
->>[pages.csv]保存了所有文章的索引  
->>[db_pages.csv]保存了未存入数据库的文章索引  
->>[u_xxxxxx.csv]保存了在时间戳为xxxxxx的第u个标签下的文章索引
+__pages.csv__保存了所有文章的索引  
+__db_pages.csv__保存了未存入数据库的文章索引  
+__u_xxxxxx.csv__保存了在时间戳为xxxxxx的第u个标签下的文章索引
 2. pageHtml  
 保存了每次爬取文章的内容，存为html文件，以爬取的文章ID命名
 3. suscriptionCsv  
