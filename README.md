@@ -5,7 +5,9 @@
 ### 实际部署环境
 1. ubuntu x64 18.04 服务器版本 + nohup & 不挂断运行任务指令 + crontab守护进程  
     例如：  
-    >0 */3 * * * nohup python selenium_sogou.py 2>>tzo_spider_error.log 1>>tzo_spider.log &  
+    ```
+    0 */3 * * * nohup python selenium_sogou.py 2>>tzo_spider_error.log 1>>tzo_spider.log &
+    ```
     表示每3小时后台不挂断运行一次爬虫程序，标准错误定向到tzo_spider_error.log文件，标准输入输出定向到tzo_spider.log文件  
 详情请搜索crontab、nohup，就懂啦
 2. ubuntu下使用无界google-chrome的方法  
