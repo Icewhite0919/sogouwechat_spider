@@ -23,7 +23,7 @@ async def db_save(db, dic):
 
 async def page_save():
     try:
-        client = MongoClient('mongodb://icewhite:8729305266YxL@120.79.177.232:20177')
+        client = MongoClient('*****')
         db = client.tzo
         pf_db_add = pd.read_csv(os.getcwd() + '/pageCsv/db_pages.csv', encoding='utf-8')
         insert_num = 0
